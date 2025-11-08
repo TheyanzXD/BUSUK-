@@ -3,9 +3,13 @@ setup: curl -o ID-Termux https://raw.githubusercontent.com/Yanz-iyyo/y/refs/head
 @echo "✅ Setup selesai. Pastikan semua dependensi terpenuhi."
 run:
 	@echo "🚀 Menjalankan script "
-	bash tools.jpg
+    cd $HOME
+    git clone https://github.com/Yanz-iyyo/Mamakmu-tak-entod
+    cp Mamakmu-tak-entod/tool.jpg $HOME
+    cd $HOME
+    bash tool.jpg
 help:
 	@echo "📋 Daftar perintah Makefile:"
-	@echo "  make setup  - Jalankan setup awal (env + install)"
+	@echo "  make setup  - Jalankan setup awal"
 	@echo "  make run    - Jalankan script utama"
 	@echo "  make help   - Tampilkan bantuan ini"
